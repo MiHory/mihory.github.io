@@ -389,7 +389,7 @@ main #works figcaption {
 
 main #detail_box {
   background: #d6d2d1;
-  background-image: url(images/plant.png);
+  background-image: url("../images/plant.png");
   background-repeat: no-repeat;
 }
 
