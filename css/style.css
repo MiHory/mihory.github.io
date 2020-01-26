@@ -1,0 +1,484 @@
+@charset "utf-8";
+
+/* 全体 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans JP','Fredericka the Great','Sirin Stencil','Lucida Handwriting', Roboto, "游ゴシック体", YuGothic, "Yu Gothic Medium", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
+/*  ヘッダーここから  */
+
+header {
+  height: 100vh;
+  background: url(images/header.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+header h1 {
+  width: 960px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 2.8em;
+  line-height: 1.5;
+  color: #333333;
+  margin: 0 auto;
+  padding-top: 100px;
+  font-weight: normal;
+}
+
+header .scroll_icon {
+  margin: 20px 0 0 200px;
+  font-size: 0.8em;
+}
+
+header #menu a {
+  text-decoration: none;
+}
+
+header #menu {
+  font-size: 1.4em;
+  font-family: 'Sirin Stencil', cursive;
+}
+
+header #menu ul {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 80%;
+  padding: 15px;
+  background-color: rgb(241,241,241,0.5);
+  z-index: 3;
+}
+
+#menu ul li {
+  text-align: center;
+  position: relative;
+  margin: 5px 0;
+}
+
+#menu ul li:first-of-type {
+  height: 40px;
+  border: none;
+}
+
+#menu ul li:last-of-type {
+  display: none;
+}
+
+#menu ul li .btn_box {
+  display: block;
+  width: 130px;
+  height: 25px;
+  margin: 2px 0;
+  padding: 10px;
+  color: #473515;
+  transition: all 0.2s;
+  /* border: 2px solid rgb(255,255,255,0); */
+}
+
+.btn_box::before,
+.btn_box::after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: 2;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 2px solid transparent;
+}
+
+.btn_box:hover::before,
+.btn_box:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.btn_box:hover::before {
+  border-top-color: #473515;
+  border-right-color: #473515;
+  transition: width 0.3s, height 0.3s 0.3s; 
+  -ms-transition: width 0.3s, height 0.3s 0.3s; 
+}
+
+.btn_box:hover::after {
+  border-bottom-color: #473515;
+  border-left-color: #473515;
+  transition: height 0.3s, width 0.3s 0.3s;
+  -ms-transition: height 0.3s, width 0.3s 0.3s;
+}
+
+.btn_box.position::before {
+  border-top: #473515 2px solid;
+  border-right: #473515 2px solid;
+  width: 100%;
+  height: 100%;
+}
+
+.btn_box.position::after {
+  border-bottom: #473515 2px solid;
+  border-left: #473515 2px solid;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*  コンテンツ全体ここから  */
+
+main {
+  text-align: center;
+}
+
+
+main article .chapter {
+  padding-top: 60px;
+  margin-bottom: 40px;
+  font-size: 3em;
+  font-family: 'Lucida Handwriting';
+}
+
+/*  自己紹介ここから  */
+
+main #aboutMe {
+  height: 100vh;
+  background-color: #a08c7e;
+  color: #ffffff;
+}
+
+main #aboutMe .inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+main #aboutMe .container {
+  overflow: hidden;
+}
+
+main #pic {
+  float: left;
+  margin-left: 60px;
+}
+
+main #pic img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #923e52;
+}
+
+main #info {
+  width: 500px;
+  float: left;
+  padding-left: 40px;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+main #info h2 {
+  padding-top: 20px;
+}
+
+main #favorites {
+  margin: 0 65px;
+}
+
+main #favorites h2 {
+  padding-top: 20px;
+  text-align: left;
+}
+
+main #favorites figure {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  height: 120px;
+  margin: 10px 20px 0 0;
+}
+
+main #favorites figcaption {
+  position: absolute;
+  width: 130px;
+  height: 1em;
+  text-align: center;
+  top: 50px;
+  left: 60px;
+  padding: 5px;
+  background-color: rgb(0,0,0,0.4);
+  color: #ffffff;
+}
+
+/* プロフィールここから */
+
+#profile {
+  background-color: #e9e7e8;
+  color: #923e52;
+  font-family: 'Lucida Handwriting';
+}
+
+#profile .inner {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#profile .items {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+#profile .items .year {
+  display: block;
+  height: 30px;
+  font-size: 1.8em;
+  margin-left: 50px;
+  background-color: aqua;
+}
+
+#profile .items figure {
+  display: block;
+  margin: -3px 0 0 0px;
+  overflow: hidden;
+  font-family: 'Noto Sans JP';
+  color: #e9e7e8;
+}
+
+#profile .items .visual {
+  float: left;
+  margin-right: 80px;
+}
+
+
+#profile .items #top_box {
+  margin-top: 30px;
+}
+
+#profile .items .fade_box {
+  float: left;
+  width: 500px;
+  background-color: #923e52;
+}
+
+#profile .items .fade_box h2 {
+  font-size: 1.8em;
+  line-height: 1.2em;
+  font-weight: normal;
+  padding: 25px 0 0 25px;
+}
+
+#profile .items .fade_box p {
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 25px 0 25px 25px;
+}
+
+#profile .future {
+  width: 870px;
+  margin-left: 50px;
+  text-align: left;
+  line-height: 2em;
+  font-family: 'Noto Sans JP';
+}
+
+#profile .future h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+#profile .future ul {
+  list-style-position: inside;
+  padding-left: 20px;
+  font-size: 1.1em;
+  padding-bottom: 80px;
+}
+
+/*  作品ここから  */
+
+main #works {
+  padding-bottom: 25px;
+  background-color: #58a86f;
+  color: #f8fbf0;
+}
+
+main #works .inner p {
+  line-height: 1.5em;
+}
+
+main #works .inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+main #works .gallery_box {
+  margin: 20px auto 0 auto;
+}
+
+main #works .hide {
+  display: none;
+}
+
+main #works figure {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+main #works #card1::before,
+main #works #card1::after {
+  position: absolute;
+  animation: 0.5s bound infinite alternate linear;
+}
+
+@keyframes bound {
+  to { transform: transtateY(0); }
+  from { transform: translateY(4px); }
+}
+
+main #works #card1::after {
+  content: attr(data-tooltip);
+  display: block;
+  padding: 8px;
+  background: #c7891a;
+  color: #ffffff;
+  font-size: 0.8em;
+  border-radius: 5px;
+  top: -15px;
+  left: -10px;
+}
+
+main #works #card1::before {
+  content: "";
+  border: 10px solid transparent;
+  border-top-color: #c7891a;
+  top: 8px;
+  left: 8px;
+}
+
+main #works figure img {
+  padding: 3px 3px 31px 3px;
+  border-radius: 0 0 10px 10px;
+  z-index: 2;
+}
+
+main #works img:hover {
+  background-color: #f8fbf0;
+}
+
+main #works figure:last-child {
+  margin-right: 0;
+}
+
+main #works figcaption {
+  display: block;
+  width: 244px;
+  height: 25px;
+  position: absolute;
+  margin-top: -32px;
+  margin-left: 3px;
+  padding-top: 8px;
+  color: #333333;
+  border-radius: 0 0 10px 10px;
+  background-color: #f8fbf0;
+  font-size: 0.9em;
+  z-index: 1;
+}
+
+/*  作品詳細ここから  */
+
+main #detail_box {
+  background: #d6d2d1;
+  background-image: url(images/plant.png);
+  background-repeat: no-repeat;
+}
+
+main #detail_box article {
+  padding: 60px 0 80px 0;
+  display: none;
+}
+
+main #detail_box article h2 {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+main #detail_box table {
+  width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+main #detail_box table th,td {
+  border-bottom: dotted 1px #363636;
+  line-height: 2em;
+}
+
+main #detail_box table th {
+  width: 30%;
+  text-indent: 1.5em;
+}
+
+main #detail_box table tr:last-of-type th,tr:last-of-type td {
+  border: none;
+}
+
+/*  連絡先ここから  */
+
+main #contact {
+  background-color: #aa37b2;
+  color: #ffffff;
+}
+
+main #contact .inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+main #contact .inner p {
+  padding-left: 40px;
+  padding-bottom: 80px;
+  line-height: 1.5em;
+}
+
+main #contact .container {
+  width: 300px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+main #contact .container p {
+  margin-bottom: 10px;
+  color: #202020;
+}
+
+main #contact .container .slack_box {
+  text-align: left;
+  margin-bottom: 40px;
+  padding-left: 80px;
+}
+
+main #contact .container .slack_box h3 {
+  color: #202020;
+  margin-bottom: 10px;
+}
+
+main #contact .container span {
+  display: inline-block;
+  background-color: #d1b39d;
+  color: #412b24; 
+  border: #412b24 2px solid;
+  padding: 5px;
+}
+
+/*  フッターここから  */
+
+footer {
+  height: 40px;
+  background-color: #362e2b;
+  color: #fff;
+  padding-top: 20px;
+  font-size: 0.8em;
+  text-align: center;
+}
