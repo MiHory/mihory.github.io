@@ -2,7 +2,7 @@
 
 /* 全体 */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI","Helvetica Neue","Fredericka the Great","Sirin Stencil","Galada","Noto Sans JP","Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI","Helvetica Neue","Fredericka the Great","Sirin Stencil","Courgette","Noto Sans JP","Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-size: 1em;
   letter-spacing: 0.1em;
 }
@@ -135,7 +135,7 @@ main article .chapter {
   padding-top: 60px;
   margin-bottom: 40px;
   font-size: 4em;
-  font-family: 'Galada', cursive;
+  font-family: 'Courgette', cursive;
   font-weight: normal;
 }
 
